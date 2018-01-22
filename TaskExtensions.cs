@@ -4,7 +4,7 @@
     public static class TaskExtensions
     {
         /// <summary>
-        /// It processses an enumerable collection and creates a task that will complete 
+        /// It processes an enumerable collection and creates a task that will complete 
         /// when all of the <see cref="T:System.Threading.Tasks.Task`1" /> 
         /// objects in an enumerable collection have completed with limited concurrency.
         /// </summary>
