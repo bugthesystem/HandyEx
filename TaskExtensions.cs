@@ -13,7 +13,7 @@
         /// <param name="numberOfTasksGrantedConcurrently">The number of tasks that granted concurrently. </param>
         /// <typeparam name="T">The type</typeparam>
         /// <returns>The <see cref="Task"/>. </returns>
-        public static async Task WhenAllWithLimitedConcurrency<T>(IEnumerable<T> items, Func<T, Task> taskFunc, int numberOfTasksGrantedConcurrently)
+        public static async Task WhenAllByThrottlingAsync<T>(IEnumerable<T> items, Func<T, Task> taskFunc, int numberOfTasksGrantedConcurrently)
         {
             using (var semaphore = new SemaphoreSlim(numberOfTasksGrantedConcurrently))
             {
