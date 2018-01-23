@@ -22,7 +22,7 @@
                         await semaphore.WaitAsync();
                         try
                         {
-                            return taskFunc(item);
+                            await taskFunc(item);
                         }
                         finally
                         {
